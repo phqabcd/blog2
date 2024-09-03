@@ -17,7 +17,7 @@
 
 
 
-<title>Spring Cloud笔记 | Blog</title>
+<title>设计模式笔记 | Blog</title>
 
 
 
@@ -192,7 +192,7 @@
         </h2>
       </a>
       <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        Spring Cloud笔记
+        设计模式笔记
       </div>
       <div class="flex-1"></div>
       <div class="flex items-center gap-3">
@@ -237,12 +237,16 @@
 
 <!-- toc -->
 
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
 <section class="px-6 max-w-prose mx-auto md:px-0">
   <!-- header -->
   <header class="overflow-hidden pt-6 pb-6 md:pt-12">
     <div class="pt-4 md:pt-6">
       <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
-        Spring Cloud笔记
+        设计模式笔记
       </h1>
       <div>
         <section class="flex items-center gap-3 text-sm">
@@ -258,7 +262,7 @@
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>8 words</span>
+            <span>423 words</span>
           </span>
           
         </section>
@@ -267,7 +271,9 @@
   </header>
   <!-- content -->
   <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
-    <p>微服务的核心组件</p>
+    <h1 id="创建型"><a href="#创建型" class="headerlink" title="创建型"></a>创建型</h1><h2 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h2><p>介绍：定义⼀个创建对象的接⼝，让其⼦类⾃⼰决定实例化哪⼀个⼯⼚类，⼯⼚模式使其创建过程延迟到⼦类进⾏。<br>案例场景模拟：模拟发奖多种商品。<br>实现：<br>1）用if else判断奖品类型，对应发放；<br>2）定义了⼀个商店的⼯⼚类，在⾥⾯按照类型实现各种商品的服务。<br>对商品的工厂类，if可以改为switch或者map配置结构。</p>
+<h1 id="结构型"><a href="#结构型" class="headerlink" title="结构型"></a>结构型</h1><h2 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h2><p>介绍：是把原本不兼容的接⼝，通过适配修改做到统⼀。<br>案例场景模拟：有⼀个系统可以配置⼀下就把外部的MQ接⼊进⾏，这些MQ可能是⼀些注册开户消息、商品下单消息等等。<br>实现：<br>定义了通⽤的MQ消息体，后续把所有接⼊进来的消息进⾏统⼀的处理。<br>适配器类用于把不同类型MQ种的各种属性，映射成我们需要的属性并返回。就像⼀个属性中有 ⽤户ID;uId ，映射到我们需要的； userId ，做统⼀处理（映射管理定义在 Map&lt;String, String&gt; link）。  </p>
+<h1 id="行为型"><a href="#行为型" class="headerlink" title="行为型"></a>行为型</h1><h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2><p>介绍：应用在具有同类可替代的⾏为逻辑算法场景。⽐如；不同类型的交易⽅式(信⽤卡、⽀付宝、微信)、⽣成唯⼀ID策略(UUID、DB⾃增、DB+Redis、雪花算法、Leaf算法)等，都可以使⽤策略模式进⾏⾏为包装，供给外部使⽤。<br>案例场景模拟：在购买商品时候使⽤的各种类型优惠券(满减、直减、折扣、n元购)。<br>实现：定义⼀个接口类( ICouponDiscount )以及四种优惠券类型的实现⽅式；提供策略模式的控制类处理。 </p>
 
   </article>
   <!-- tag -->
@@ -278,16 +284,16 @@
   <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
     <div>
       
-        <a href="/blog2/2024/09/03/Redis-Notes/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+        <a href="/blog2/2024/08/29/Java-Notes/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
           <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
-          Redis笔记
+          Java基础笔记
         </a>
       
     </div>
     <div>
       
-        <a href="/blog2/2024/09/03/Spring-Notes/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
-          Spring笔记
+        <a href="/blog2/2024/08/27/Algorithm-Notes/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          算法笔记
           <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
         </a>
       

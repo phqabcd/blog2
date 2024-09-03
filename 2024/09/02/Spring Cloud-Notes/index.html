@@ -17,7 +17,7 @@
 
 
 
-<title>Kafka笔记 | Blog</title>
+<title>Spring Cloud笔记 | Blog</title>
 
 
 
@@ -192,7 +192,7 @@
         </h2>
       </a>
       <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        Kafka笔记
+        Spring Cloud笔记
       </div>
       <div class="flex-1"></div>
       <div class="flex items-center gap-3">
@@ -237,16 +237,12 @@
 
 <!-- toc -->
 
-  <!-- tocbot -->
-<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
-
-
 <section class="px-6 max-w-prose mx-auto md:px-0">
   <!-- header -->
   <header class="overflow-hidden pt-6 pb-6 md:pt-12">
     <div class="pt-4 md:pt-6">
       <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
-        Kafka笔记
+        Spring Cloud笔记
       </h1>
       <div>
         <section class="flex items-center gap-3 text-sm">
@@ -262,7 +258,7 @@
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>181 words</span>
+            <span>8 words</span>
           </span>
           
         </section>
@@ -271,11 +267,7 @@
   </header>
   <!-- content -->
   <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
-    <h1 id="快速实战和基本原理"><a href="#快速实战和基本原理" class="headerlink" title="快速实战和基本原理"></a>快速实战和基本原理</h1><h1 id="发送消费核心参数与设计原理"><a href="#发送消费核心参数与设计原理" class="headerlink" title="发送消费核心参数与设计原理"></a>发送消费核心参数与设计原理</h1><h1 id="线上问题总结及性能优化实践"><a href="#线上问题总结及性能优化实践" class="headerlink" title="线上问题总结及性能优化实践"></a>线上问题总结及性能优化实践</h1><h2 id="线上问题"><a href="#线上问题" class="headerlink" title="线上问题"></a>线上问题</h2><h3 id="消息重复消费"><a href="#消息重复消费" class="headerlink" title="消息重复消费"></a>消息重复消费</h3><p>原因：  </p>
-<ul>
-<li>消息发送端<br>发送消息如果配置了重试机制，比如网络抖动时间过长导致发送端发送超时，实际broker可能已经接收到消息，但发送方会重新发送消息。  </li>
-<li>消息消费端<br>如果消费这边配置的是自动提交，刚拉取了一批数据处理了一部分，但还没来得及提交，服务挂了，下次重启又会拉取相同的一批数据重复处理。<br>处理：消费端做消费幂等。</li>
-</ul>
+    <p>微服务的核心组件</p>
 
   </article>
   <!-- tag -->
@@ -286,16 +278,16 @@
   <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
     <div>
       
-        <a href="/blog2/2024/09/03/Java-Notes/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+        <a href="/blog2/2024/09/03/Redis-Notes/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
           <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
-          Java基础笔记
+          Redis笔记
         </a>
       
     </div>
     <div>
       
-        <a href="/blog2/2024/09/03/Algorithm-Notes/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
-          算法笔记
+        <a href="/blog2/2024/09/01/Spring-Notes/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          Spring笔记
           <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
         </a>
       
